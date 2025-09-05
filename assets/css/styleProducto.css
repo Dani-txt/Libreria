@@ -1,0 +1,16 @@
+#agregarLibroSection {
+    display: none;
+}
+
+.catalogo{
+    margin: 20px;
+    text-align: center;
+}
+
+.carritoSection{
+    display: none;
+}
+
+.botonComprar{
+    display: none;
+}

@@ -1,0 +1,23 @@
+La Biblia. El Nuevo Testamento
+Autor: Los Apostoles
+precio: 12000
+imagen: laBiblia
+descripción: lorem o La biblia pero con dibujitos
+
+Curso de Programacion: Android con Kotlin
+autor:Antonio Javier Gallego Sánchez (Autor)  · Miguel Ángel Lozano Ortega (Autor)
+precio:28000
+imagen: kotlin
+descripción: lorem o Desde hace ya algunos años los dispositivos móviles nos acompañan en todo momento. El uso de aplicaciones móviles se extiende a gran parte de las actividades de nuestra vida diaria, desde el ocio hasta la salud, la educación o las herramientas para el ámbito profesional.
+
+H. P. Lovecraft I
+autor: H. P. Lovecraft
+precio: 18000
+imagen: lovecraft
+descripción: primer volumen de la colección completa de las obras de ficción y terror de Howard Phillips Lovecraft
+
+Hunter x Hunter vol 1
+autor: Yoshihiro Togashi
+precio: 17500
+imagen: hunterx
+descripción: En busca de su padre, en el camino se agarra a madrasos y aprende cosas (Obra inconclusa)

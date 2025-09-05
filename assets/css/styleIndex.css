@@ -1,0 +1,22 @@
+/*de momento sólo le agregué estilo al menú para "centrarlo" más que nada*/
+.menu{
+    background-color: #f8f9fa;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.perfilUsuario {
+    display: none;
+}
+
+.buscador{
+    margin: 20px;
+    text-align: center;
+}
+
+.formularioUsuario{
+    margin: 20px;
+    text-align: left
+}
