@@ -1,0 +1,269 @@
+/*
+    Estilos base y paleta, inspirados en pagina1-main (Materialize orange) pero compatibles con Bootstrap.
+    Objetivo: unificar tipografía, navegación, formularios, buscador, blog y footer.
+*/
+
+/*
+Acá irán los estilos del index y los usuarios
+*/
+
+:root{
+    --primary: #fb8c00; /* orange */
+    --primary-dark: #ef6c00;
+    --bg: #ffffff;
+    --text: #222222;
+    --muted: #6b7280;
+    --card-bg: #ffffff;
+    --border: #e5e7eb;
+    --shadow: 0 4px 12px rgba(0,0,0,.06);
+    --radius: 12px;
+}
+
+*{ box-sizing: border-box; }
+html,body{ height: 100%; }
+body{
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif;
+    color: --text;
+    background: --bg;
+    line-height: 1.5;
+}
+
+img{ max-width: 100%; display: block; }
+
+/* Navegación superior */
+.menu{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--primary);
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: flex-start;
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+.menu a{
+    color: var(--text);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color .2s ease, color .2s ease;
+    font-weight: 600;
+}
+.menu a:hover{
+    background: #f6f6f7;
+    color: --primary-dark;
+}
+
+/* Perfil de usuario (controlado por JS con clases .hidden y .visible) */
+.perfilUsuario {
+    margin-left: auto;
+    display: none; /* estado por defecto */
+    align-items: center;
+    gap: 10px;
+}
+
+.perfilUsuario.visible {
+    display: flex; /* mostrar cuando tiene clase visible */
+}
+
+.perfilUsuario.hidden {
+    display: none; /* asegurar que esté oculto */
+}
+
+.perfilUsuario button,
+.perfilUsuario .login-btn {
+    background: var(--primary);
+    color: var(--text);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color .2s ease;
+    text-decoration: none;
+}
+
+.perfilUsuario button:hover,
+.perfilUsuario .login-btn:hover {
+    background: var(--primary-dark);
+}
+
+#nombreUsuario {
+    font-weight: 600;
+    color: var(--text);
+}
+
+/* Buscador en home y Libros */
+.buscador{
+    margin: 24px auto;
+    padding: 20px;
+    max-width: 980px;
+    text-align: center;
+}
+
+.buscador h1{
+    margin: 8px 0 16px;
+}
+
+.buscador input[type="text"]{
+    width: min(680px, 100%);
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    outline: none;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.buscador input[type="text"]:focus{
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(251, 140, 0, .15);
+}
+
+.buscador button{
+    margin-left: 10px;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 10px;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .2s ease, transform .05s ease;
+}
+
+.buscador button:active{
+    transform: translateY(1px);
+}
+
+.buscador button:hover{
+    background: var(--primary-dark);
+}
+
+/* Resultados de búsqueda */
+#resultadoBusqueda{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+#resultadoBusqueda > div{
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    box-shadow: var(--shadow);
+    text-align: left;
+}
+
+#resultadoBusqueda img{
+    border-radius: 8px;
+}
+
+/* Formularios (registro / login) */
+.formularioRegistro,
+.formularioInicio {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+.formularioUsuario h3{
+    margin: 8px 0 12px;
+}
+
+.formularioUsuario input,
+.formularioUsuario select,
+.formularioUsuario textarea{
+    width: 100%;
+    margin: 8px 0;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    outline: none;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.formularioUsuario input:focus,
+.formularioUsuario select:focus,
+.formularioUsuario textarea:focus{
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(251, 140, 0, .15);
+}
+.formularioUsuario button{
+    margin-top: 8px;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 10px;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+.formularioUsuario button:hover{ background: var(--primary-dark); }
+
+
+
+/*Contacto*/
+.formularioContacto{
+    max-width: 720px;
+    margin: 24px auto;
+    padding: 0 16px;
+    border: 10px
+}
+
+/* Footer simple */
+footer{
+    margin-top: 40px;
+    padding: 20px 12px;
+    background: #fff;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    text-align: center;
+}
+
+/* Utilidades */
+.text-muted{ color: var(--muted); }
+
+/* Responsividad */
+/* Responsividad */
+@media (max-width: 720px){
+    .menu { 
+        flex-wrap: wrap; 
+        gap: 8px; 
+    }
+    
+    .perfilUsuario { 
+        width: 100%; 
+        justify-content: flex-end;
+        /* No forzar display: none aquí, dejar que JavaScript controle */
+    }
+    
+    .perfilUsuario.visible {
+        display: flex; /* mantener visible en responsive */
+    }
+    
+    .buscador button { 
+        margin: 12px 0 0; 
+        width: 100%; 
+    }
+}
+
+.logo {
+    background-image: url("../img/logo.png");
+    background-size: contain;   /* Ajusta el logo dentro del espacio */
+    background-repeat: no-repeat; /* Evita que se repita */
+    background-position: center;  /* Centra el logo */
+    
+    width: 120px;   /* ajusta el tamaño que quieras */
+    height: 60px;
+    display: inline-block; /* Para que se comporte como imagen */
+}

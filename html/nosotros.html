@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libreria Tuli</title>
+    <link rel="stylesheet" href="../assets/css/styleindex.css">
+    <link rel="stylesheet" href="../assets/css/styleLibros.css">
+    <link rel="stylesheet" href="../assets/css/styleNosotros.css">
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous">
+</head>
+<body>
+    <!--Menu de navegación-->
+    <nav class="menu">
+        <a href="../index.html">Inicio</a>
+        <a href="libros.html">Libros</a>
+        <a href="blog.html">Blog</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="usuario.html" id="loginButton">Iniciar Sesión</a>
+        <div id="perfilUsuario" class="perfilUsuario">
+            <span id="nombreUsuario"></span>
+            <button onclick="cerrarSesion()">Cerrar sesión</button>
+        </div>
+    </nav>
+        <!--Sección del formulario de contacto-->
+    <section>
+        <div class="formularioContacto">
+            <h3>Contacto</h3>
+            <input type="text" id="nombre" placeholder="Nombre">
+            <input type="email" id="email" placeholder="Correo Electrónico">
+            <textArea id="mensaje" placeholder="Escribe aquí tu mensaje"></textArea>
+            <button onclick="enviarContacto()">Enviar</button>
+        </div>
+    </section>
+    <!--Sección de nosotros-->
+    <section class="nosotros container mt-5">
+        <h1 class="mb-4">Sobre Nosotros</h1>
+        <p>
+            En <strong>Librería Tuli</strong> creemos que cada libro es una puerta hacia un mundo nuevo.
+            Desde nuestra fundación en 2010, hemos trabajado con pasión para acercar historias,
+            conocimiento y aventuras a lectores de todas las edades.
+        </p>
+        <h2 class="mt-4">Nuestra Historia</h2>
+        <p>
+            Comenzamos como una pequeña librería familiar en <em>Ciudad Literaria</em>,
+            con apenas un par de estantes y un sueño: que cualquier persona, sin importar su lugar,
+            pudiera encontrar el libro perfecto para acompañar su vida. Hoy en día contamos con
+            una plataforma digital que permite llegar a todo el país con envíos rápidos y seguros.
+        </p>
+        <h2 class="mt-4">Misión</h2>
+        <p>
+            Fomentar la lectura como herramienta de crecimiento personal y colectivo,
+            ofreciendo libros de calidad a precios accesibles, y creando una comunidad de lectores
+            apasionados.
+        </p>
+        <h2 class="mt-4">Visión</h2>
+        <p>
+            Ser la librería de referencia en Latinoamérica, no solo por nuestro catálogo,
+            sino también por el compromiso con la cultura, la educación y la imaginación.
+        </p>
+        <h2 class="mt-4">Valores</h2>
+        <ul>
+            <li><strong>Pasión por la lectura:</strong> creemos en el poder transformador de los libros.</li>
+            <li><strong>Accesibilidad:</strong> acercamos el conocimiento a todos, sin barreras.</li>
+            <li><strong>Innovación:</strong> buscamos nuevas formas de conectar lectores con historias.</li>
+            <li><strong>Compromiso:</strong> apoyamos la cultura local y promovemos a autores emergentes.</li>
+        </ul>
+    </section>
+
+    <!--Sección del footer-->
+    <footer class="footer">
+    <div class="footer-contenido">
+        <div class="footer-seccion">
+            <h3>Nuestra Tienda</h3>
+            <p>Tu destino para descubrir grandes historias desde 2010. Ofrecemos los mejores títulos con envío a todo el país.</p>
+            <div class="social-icons">
+            </div>
+        </div>
+        <div class="footer-seccion">
+            <h3>Contacto</h3>
+            <div class="contact-info">
+                <p>Numero: +56 57991309</p>
+                <p>Mail: info@tulibreria.com</p>
+                <p>Dirreccion Calle de los Libros 123, Ciudad Literaria</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Tu Librería. Todos los derechos reservados.</p>
+    </div>
+    </footer>
+</body>
+<script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous">
+</script>
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous">
+</script>
+<script src="../assets/js/contacto.js"></script>
+<script src="../assets/js/usuario.js"></script>
+</html>
